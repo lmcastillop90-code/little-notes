@@ -1,0 +1,23 @@
+name = "little-notes-api"
+main = "src/index.ts"
+compatibility_date = "2025-02-14"
+compatibility_flags = ["nodejs_compat"]
+
+# Cron: check for due reminders every minute (free plan supports this)
+[triggers]
+crons = ["* * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "little-notes"
+database_id = "c967104a-a386-45e3-95fb-5db6f4a51f36"
+
+[vars]
+VAPID_SUBJECT = "mailto:lmcastillop90@gmail.com"
+# Allowed web origin of the app (Cloudflare Pages URL). Use "*" while testing.
+ALLOWED_ORIGIN = "*"
+
+# Secrets (set with `wrangler secret put <NAME>`, never commit them):
+#   APP_SECRET            – the code Trang types in the app to pair it
+#   VAPID_PUBLIC_KEY      – from `npm run vapid`
+#   VAPID_PRIVATE_KEY     – from `npm run vapid`

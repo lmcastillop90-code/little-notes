@@ -1,0 +1,22 @@
+{
+  "name": "@little-notes/worker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute little-notes --remote --file=./schema.sql",
+    "db:init:local": "wrangler d1 execute little-notes --local --file=./schema.sql",
+    "vapid": "node scripts/vapid.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@block65/webcrypto-web-push": "^2.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250214.0",
+    "typescript": "^5.7.3",
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,3 @@
+APP_SECRET=choose-a-secret-for-trang
+VAPID_PUBLIC_KEY=paste-from-npm-run-vapid
+VAPID_PRIVATE_KEY=paste-from-npm-run-vapid

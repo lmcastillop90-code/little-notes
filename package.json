@@ -1,0 +1,17 @@
+{
+  "name": "little-notes",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Little Notes — a cute, reliable reminder app made for Trang. Future you will thank you for this.",
+  "workspaces": [
+    "app",
+    "worker"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w app",
+    "build": "npm run build -w app",
+    "preview": "npm run preview -w app",
+    "worker:dev": "npm run dev -w worker",
+    "worker:deploy": "npm run deploy -w worker"
+  }
+}
