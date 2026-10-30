@@ -1,0 +1,7 @@
+# Serves the built PWA (dist/) as a static site from a Cloudflare Worker (free plan).
+name = "little-notes"
+compatibility_date = "2025-02-14"
+
+[assets]
+directory = "./dist"
+not_found_handling = "single-page-application"
